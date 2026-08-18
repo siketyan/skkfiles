@@ -1,0 +1,4 @@
+[submodule "dict"]
+	path = dict
+	url = https://github.com/skk-dev/dict.git
+	shallow = true
