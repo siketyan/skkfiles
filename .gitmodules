@@ -2,3 +2,6 @@
 	path = dict
 	url = https://github.com/skk-dev/dict.git
 	shallow = true
+[submodule "skk-emoji-jisyo"]
+	path = skk-emoji-jisyo
+	url = https://github.com/uasi/skk-emoji-jisyo.git
