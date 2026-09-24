@@ -7,6 +7,6 @@ Personal SKK configuration files.
 ```shell
 git clone https://github.com/siketyan/skkfiles.git
 cd skkfiles
-make dict
+make dict emoticon
 make -C macSKK install
 ```

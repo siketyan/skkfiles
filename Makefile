@@ -13,3 +13,13 @@ dict:
 	git -C dict checkout -q --detach FETCH_HEAD
 	git submodule init dict
 	git submodule absorbgitdirs dict
+
+MOZC_EMOTICON_URL := https://raw.githubusercontent.com/google/mozc/master/src/data/emoticon/emoticon.tsv
+
+.PHONY: emoticon
+emoticon: SKK-JISYO.emoticon.utf8
+
+SKK-JISYO.emoticon.utf8: mozc-emoticon.awk
+	curl -fsSL -o emoticon.tsv $(MOZC_EMOTICON_URL)
+	awk -f mozc-emoticon.awk emoticon.tsv > $@
+	rm emoticon.tsv
